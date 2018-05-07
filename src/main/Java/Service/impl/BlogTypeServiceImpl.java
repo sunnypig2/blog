@@ -6,6 +6,7 @@ import Entity.PageBean;
 import org.springframework.stereotype.Service;
 import Service.BlogTypeService;
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class BlogTypeServiceImpl implements BlogTypeService {
@@ -36,5 +37,10 @@ public class BlogTypeServiceImpl implements BlogTypeService {
 
     public Integer deleteBlogType(Integer id) {
         return blogTypeDao.deleteBlogType(id);
+    }
+
+    public List<BlogType> getBlogTypeData() {
+
+        return blogTypeDao.listByPage(0,blogTypeDao.getTotal().intValue());
     }
 }

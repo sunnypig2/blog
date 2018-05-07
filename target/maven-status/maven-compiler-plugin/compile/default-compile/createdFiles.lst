@@ -1,8 +1,14 @@
+Service\impl\BlogServiceImpl.class
 Entity\PageBean.class
+Listener\InitBloggerData.class
 util\ResponseUtil.class
+Controllers\admin\BlogAdminController.class
 Controllers\BloggerController.class
+Dao\BlogDao.class
+Entity\Blog.class
 Controllers\admin\BlogTypeController.class
 Service\impl\BlogTypeServiceImpl.class
+Service\BlogService.class
 Service\BlogTypeService.class
 Dao\BlogTypeDao.class
 Entity\BlogType.class

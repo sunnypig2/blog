@@ -7,6 +7,9 @@ public class BlogType implements Serializable{
     private String typeName;
     private Integer orderNum;
 
+    public BlogType(){
+
+    }
     public BlogType(Integer id,String typeName,Integer orderNum){
         this.id = id;
         this.typeName = typeName;

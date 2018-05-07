@@ -32,26 +32,66 @@
                 text: '添加',            //名称
                 handler: function () {  //回调函数
                     //打开对话框并设置标题
-                    $("#dlg").dialog("open").dialog("setTitle","添加博客类别信息");
                     url="${blog}/admin/blogType/save";
+                    $("#dlg").dialog("open").dialog("setTitle","添加博客类别信息");
+
                 }
             },'-',{
                 iconCls: 'icon-edit',
                 text: '修改',
                 handler: function () {
-                    alert("添加");
+                    var selectedRows = $("#dg").datagrid("getSelections");
+                    if(selectedRows.length != 1){
+                        $.messager.alert("系统提示","请选择一个要修改的博客类别");
+                        return;
+                    }
+
+                    //获取选中ID
+                    var row = selectedRows[0];
+                    $("#dlg").dialog("open").dialog("setTitle","修改博客类别信息");
+                    //将数组回显对话框中
+                    $("#fm").form("load",row);//会自动识别name属性，将row中对应的数据，填充到form表单对应的name中
+                    //在URL中添加ID后台就能识别是更新操作
+                    url = "${blog}/admin/blogType/save?id="+row.id;
+
                 }
             },'-',{
                 iconCls: 'icon-remove',
                 text: '删除',
                 handler: function () {
-                    alert("删除");
+                    var selectedRows = $("#dg").datagrid("getSelections");
+                    if(selectedRows.length == 0){
+                    $.messager.alert("系统提示","请选择要删除的数据");
+                    return;
+                    }
+                    var idsStr = [];
+                    for(var i =0;i<selectedRows.length;i++){
+                        idsStr.push(selectedRows[i].id);
+                    }
+                    //将数组安装，连接成字符串
+                    var ids = idsStr.join(",");
+                    //提示是否确认删除
+                    $.messager.confirm("系统提示","<font color=red>您确定要删除选中的"+selectedRows.length+"条数据么？</font>",function(r){
+                        if(r){
+                            $.post("${blog}/admin/blogType/delete",
+                                {ids: ids}, function(result){
+                                    if(result.exist) {
+                                        $.messager.alert("系统提示", '该类别下有博客，不能删除!');
+                                    } else if(result.success) {
+                                        $.messager.alert("系统提示", "数据删除成功！");
+                                        $("#dg").datagrid("reload");
+                                    } else {
+                                        $.messager.alert("系统提示", "数据删除失败！");
+                                    }
+                                }, "json");
+                        }
+                    });
                 }
             },'-',{
                 iconCls: 'icon-reload',
                 text: '刷新',
                 handler: function () {
-                    alert("刷新");
+                    $("#dg").datagrid("reload");
                 }
             }],
             //同列属性，但是这些列将会冻结在左侧,z大小不会改变，当宽度大于250时，会显示滚动条，但是冻结的列不在滚动条内
@@ -89,13 +129,19 @@
             }
         });
     }
+
+    function closeBlogTypeDialog(){
+        $("#typeName").val("");
+        $("#typeNum").val("");
+        $("#dlg").dialog("close");
+    }
 </script>
 <body>
 <table id="dg"></table>
 
 <div id="dlg" class="easyui-dialog" style="width:500px; height:180px; padding:10px 20px"
      closed="true" buttons="#dlg-buttons">
-    <form id="fm" method="post">
+    <form id="fm" method="post" accept-charset="utf-8">
         <table cellspacing="8px">
             <tr>
                 <td>博客类别名称</td>

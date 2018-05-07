@@ -3,6 +3,8 @@ package Service;
 import Entity.BlogType;
 import Entity.PageBean;
 
+import java.util.List;
+
 public interface BlogTypeService {
 
     //分页查询
@@ -17,5 +19,7 @@ public interface BlogTypeService {
     public Integer updateBlogType(BlogType blogType);
     //删除博客类别
     public Integer deleteBlogType(Integer id);
+
+    List<BlogType> getBlogTypeData();
 
 }

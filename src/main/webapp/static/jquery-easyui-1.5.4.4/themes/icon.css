@@ -31,9 +31,9 @@
 .icon-reload{
 	background:url('icons/reload.png') no-repeat center center;
 }
-/*.icon-search{*/
-	/*background:url('icons/search.png') no-repeat center center;*/
-/*}*/
+.icon-search{
+	background:url('icons/search.png') no-repeat center center;
+}
 /*.icon-print{*/
 	/*background:url('icons/print.png') no-repeat center center;*/
 /*}*/
