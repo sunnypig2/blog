@@ -170,6 +170,12 @@
       <artifactId>ezmorph</artifactId>
       <version>1.0.6</version>
     </dependency>
+    <!-- 添加jsoup支持-->
+    <dependency>
+      <groupId>org.jsoup</groupId>
+      <artifactId>jsoup</artifactId>
+      <version>1.9.2</version>
+    </dependency>
     <!--json serialize and deserialization-->
     <!-- 引入fastjson依赖 -->
     <dependency>
