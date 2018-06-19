@@ -24,6 +24,7 @@ public class BloggerController {
     public String login(HttpServletRequest request){
         return "login";
     }
+    
     @RequestMapping(value = "/login" ,method = RequestMethod.POST)
     public String login(Blogger blogger, HttpServletRequest request){
         System.out.println(blogger);
