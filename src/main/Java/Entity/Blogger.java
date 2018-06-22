@@ -8,15 +8,15 @@ import java.io.Serializable;
 public class Blogger implements Serializable {
     private Integer id;
     private String userName;    //用户名
-    private String password;    //密码
+    private String passWord;    //密码
     private String profile;     //博主信息
     private String nickName;    //昵称
     private String sign;        //博主签名
     private String imageName; //图片路径
 
-    public Blogger(String userName, String password, String profile, String nickName, String sign, String imageName) {
+    public Blogger(String userName, String passWord, String profile, String nickName, String sign, String imageName) {
         this.userName = userName;
-        this.password = password;
+        this.passWord = passWord;
         this.profile = profile;
         this.nickName = nickName;
         this.sign = sign;
@@ -43,12 +43,12 @@ public class Blogger implements Serializable {
         this.userName = userName;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPassWord() {
+        return passWord;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPassWord(String password) {
+        this.passWord = password;
     }
 
     public String getProfile() {
@@ -88,7 +88,7 @@ public class Blogger implements Serializable {
         return "Blogger{" +
                 "id=" + id +
                 ", userName='" + userName + '\'' +
-                ", password='" + password + '\'' +
+                ", passWord='" + passWord + '\'' +
                 ", profile='" + profile + '\'' +
                 ", nickName='" + nickName + '\'' +
                 ", sign='" + sign + '\'' +

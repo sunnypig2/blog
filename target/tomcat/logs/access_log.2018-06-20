@@ -1,0 +1,13 @@
+0:0:0:0:0:0:0:1 - - [20/Jun/2018:16:49:07 +0800] "GET /blog/ HTTP/1.1" 404 949 http-bio-8080-exec-1 53
+0:0:0:0:0:0:0:1 - - [20/Jun/2018:16:49:07 +0800] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-8080-exec-2 4
+0:0:0:0:0:0:0:1 - - [20/Jun/2018:16:49:12 +0800] "GET /blog/login HTTP/1.1" 405 1045 http-bio-8080-exec-3 0
+0:0:0:0:0:0:0:1 - - [20/Jun/2018:16:53:14 +0800] "GET /blog/login HTTP/1.1" 404 977 http-bio-8080-exec-1 84
+0:0:0:0:0:0:0:1 - - [20/Jun/2018:16:53:38 +0800] "GET /blog/login HTTP/1.1" 200 8212 http-bio-8080-exec-1 787
+0:0:0:0:0:0:0:1 - - [20/Jun/2018:16:53:38 +0800] "GET /static/bootstrap3/js/jquery-1.11.2.min.js HTTP/1.1" 200 95931 http-bio-8080-exec-2 15
+0:0:0:0:0:0:0:1 - - [20/Jun/2018:16:53:38 +0800] "GET /static/images/tou.png HTTP/1.1" 200 9217 http-bio-8080-exec-3 5
+0:0:0:0:0:0:0:1 - - [20/Jun/2018:16:53:39 +0800] "GET /static/images/hand.png HTTP/1.1" 200 1061 http-bio-8080-exec-4 3
+0:0:0:0:0:0:0:1 - - [20/Jun/2018:16:53:39 +0800] "GET /static/images/username.png HTTP/1.1" 200 546 http-bio-8080-exec-5 2
+0:0:0:0:0:0:0:1 - - [20/Jun/2018:16:53:39 +0800] "GET /static/images/password.png HTTP/1.1" 200 510 http-bio-8080-exec-6 2
+0:0:0:0:0:0:0:1 - - [20/Jun/2018:16:53:40 +0800] "POST /blog/loginIn HTTP/1.1" 500 5130 http-bio-8080-exec-7 47
+0:0:0:0:0:0:0:1 - - [20/Jun/2018:16:55:25 +0800] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-8080-exec-10 0
+0:0:0:0:0:0:0:1 - - [20/Jun/2018:16:55:45 +0800] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-8080-exec-10 0

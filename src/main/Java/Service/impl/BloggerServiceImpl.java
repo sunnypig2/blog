@@ -21,6 +21,7 @@ public class BloggerServiceImpl implements BloggerService {
     }
 
     public Blogger getBloggerByName(String username) {
+        System.out.println(bloggerDao);
         return bloggerDao.getBloggerByName(username);
     }
 

@@ -43,10 +43,14 @@
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.10" />
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.6.2" />
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.6.2" />
-          <element id="library" level="project" name="Maven: org.jetbrains:annotations-java5:16.0.1" />
+          <element id="library" level="project" name="Maven: org.jetbrains:annotations-java5:16.0.2" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.3.0" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:1.2.3" />
           <element id="library" level="project" name="Maven: commons-pool:commons-pool:1.6" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-core:1.2.5" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.4" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-web:1.2.5" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-spring:1.2.5" />
         </element>
       </element>
       <element id="directory" name="META-INF">

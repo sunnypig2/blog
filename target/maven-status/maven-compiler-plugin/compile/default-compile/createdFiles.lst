@@ -1,6 +1,7 @@
 Service\BloggerService.class
 util\PageUtil.class
 Controllers\IndexController.class
+realm\MyRealm.class
 Service\impl\BlogServiceImpl.class
 Entity\PageBean.class
 Controllers\admin\BlogAdminController.class
@@ -12,6 +13,7 @@ Service\BlogService.class
 Dao\BlogTypeDao.class
 Controllers\admin\MainAdminController.class
 Entity\BlogType.class
+util\MD5Util.class
 Listener\InitBloggerData.class
 util\ResponseUtil.class
 Controllers\BloggerController.class

@@ -13,6 +13,8 @@ public class TBlogger {
 
     private String imagename;
 
+    private String sign;
+
     public Integer getId() {
         return id;
     }
@@ -59,5 +61,13 @@ public class TBlogger {
 
     public void setImagename(String imagename) {
         this.imagename = imagename == null ? null : imagename.trim();
+    }
+
+    public String getSign() {
+        return sign;
+    }
+
+    public void setSign(String sign) {
+        this.sign = sign == null ? null : sign.trim();
     }
 }
